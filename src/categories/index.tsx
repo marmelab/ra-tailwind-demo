@@ -6,6 +6,7 @@ const resource: ResourceProps = {
 	name: "categories",
 	list: CategoryList,
 	edit: CategoryEdit,
+	recordRepresentation: 'name'
 };
 
 export default resource;
