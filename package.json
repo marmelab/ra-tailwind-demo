@@ -1,0 +1,51 @@
+{
+  "name": "ra-tailwind",
+  "private": true,
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "serve": "vite preview",
+    "type-check": "tsc --noEmit",
+    "lint": "eslint --fix --ext .js,.jsx,.ts,.tsx ./src",
+    "format": "prettier --write ./src"
+  },
+  "dependencies": {
+    "@heroicons/react": "^2.0.18",
+    "@tanstack/react-table": "^8.10.0",
+    "autoprefixer": "^10.4.15",
+    "clsx": "^2.0.0",
+    "daisyui": "latest",
+    "data-generator-retail": "^4.14.3",
+    "history": "^5.3.0",
+    "lodash": "^4.17.21",
+    "postcss": "^8.4.30",
+    "ra-core": "^4.14.3",
+    "ra-data-fakerest": "^4.14.3",
+    "ra-i18n-polyglot": "^4.14.3",
+    "ra-language-english": "^4.14.3",
+    "react": "^18.2.0",
+    "react-aria-components": "^1.0.0-beta.0",
+    "react-dom": "^18.2.0",
+    "react-hook-form": "^7.46.1",
+    "react-query": "3",
+    "react-router-dom": "^6.16.0",
+    "tailwindcss": "^3.3.3",
+    "theme-change": "^2.5.0"
+  },
+  "devDependencies": {
+    "@types/lodash": "^4.14.198",
+    "@types/node": "^18.16.1",
+    "@types/react": "^18.0.22",
+    "@types/react-dom": "^18.0.7",
+    "@typescript-eslint/eslint-plugin": "^5.60.1",
+    "@typescript-eslint/parser": "^5.60.1",
+    "@vitejs/plugin-react": "^4.0.1",
+    "eslint": "^8.43.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-react": "^7.32.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "prettier": "^2.8.8",
+    "typescript": "^5.1.6",
+    "vite": "^4.3.9"
+  }
+}
