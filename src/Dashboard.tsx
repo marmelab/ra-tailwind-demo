@@ -67,7 +67,6 @@ export const Dashboard = () => (
     <div className="grow card w-full bg-base-100 shadow">
       <figure>
         <svg
-          height="auto"
           viewBox="0 0 2000 1400"
           xmlns="http://www.w3.org/2000/svg"
           className="w-full h-full"
