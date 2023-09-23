@@ -44,7 +44,9 @@ const columns = [
 ];
 
 export const CategoryList = () => {
-	const listContext = useListController<Category>();
+	const listContext = useListController<Category>({
+    sort: { field: "name", order: "ASC" },
+  });
 
 	if (listContext.isLoading || !listContext.data) {
 		return <div>Loading...</div>;
