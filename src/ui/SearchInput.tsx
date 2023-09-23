@@ -1,5 +1,5 @@
 import { SearchField, Label, Input, Button } from "react-aria-components";
-import { MagnifyingGlassIcon, XMarkIcon } from "@heroicons/react/24/solid";
+import { MagnifyingGlassIcon, XMarkIcon } from "@heroicons/react/24/outline";
 import { useListContext } from "ra-core";
 
 export const SearchInput = () => {

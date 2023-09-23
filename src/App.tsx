@@ -7,6 +7,7 @@ import products from "./products";
 import categories from "./categories";
 import authProvider from "./authProvider";
 import { LoginPage } from "./ui/LoginPage";
+import { Dashboard } from "./Dashboard";
 
 export const App = () => (
   <CoreAdminContext
@@ -14,7 +15,7 @@ export const App = () => (
     dataProvider={dataProvider}
     i18nProvider={i18nProvider}
   >
-    <CoreAdminUI layout={Layout} loginPage={LoginPage}>
+    <CoreAdminUI dashboard={Dashboard} layout={Layout} loginPage={LoginPage}>
       <Resource {...products} />
       <Resource {...categories} />
     </CoreAdminUI>
