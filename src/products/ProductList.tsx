@@ -44,6 +44,9 @@ const columns = [
   columnHelper.accessor("stock", {
     header: () => "Stock",
     cell: (info) => info.renderValue(),
+    meta: {
+      headerClassName: "w-24",
+    },
   }),
   columnHelper.accessor((row) => row.id, {
     id: "actions",
@@ -52,7 +55,11 @@ const columns = [
         Edit
       </Link>
     ),
+    enableSorting: false,
     header: () => <span />,
+    meta: {
+      headerClassName: "w-12",
+    },
   }),
 ];
 

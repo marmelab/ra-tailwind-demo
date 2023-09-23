@@ -13,34 +13,41 @@ type Category = {
 const columnHelper = createColumnHelper<Category>();
 
 const columns = [
-	columnHelper.accessor("name", {
-		header: () => "Name",
-		cell: (info) => info.getValue(),
-		footer: (info) => info.column.id,
-	}),
-	columnHelper.accessor("productCount", {
-		header: () => "Products",
-		cell: (info) => {
-			return (
-				<ReferenceManyCount
-					reference="products"
-					resource="categories"
-					record={info.row.original}
-					target="category_id"
-					source="id"
-				/>
-			);
-		},
-	}),
-	columnHelper.accessor((row) => row.id, {
-		id: "actions",
-		cell: (info) => (
-			<Link className="btn btn-sm btn-ghost" to={info.getValue().toString()}>
-				Edit
-			</Link>
-		),
-		header: () => <span />,
-	}),
+  columnHelper.accessor("name", {
+    header: () => "Name",
+    cell: (info) => info.getValue(),
+    footer: (info) => info.column.id,
+  }),
+  columnHelper.accessor("productCount", {
+    header: () => "Products",
+    cell: (info) => {
+      return (
+        <ReferenceManyCount
+          reference="products"
+          resource="categories"
+          record={info.row.original}
+          target="category_id"
+          source="id"
+        />
+      );
+    },
+    meta: {
+      headerClassName: "w-24",
+    },
+  }),
+  columnHelper.accessor((row) => row.id, {
+    id: "actions",
+    cell: (info) => (
+      <Link className="btn btn-sm btn-ghost" to={info.getValue().toString()}>
+        Edit
+      </Link>
+    ),
+    enableSorting: false,
+    header: () => <span />,
+    meta: {
+      headerClassName: "w-12",
+    },
+  }),
 ];
 
 export const CategoryList = () => {

@@ -55,7 +55,7 @@ export const Datagrid = <RecordType extends RaRecord = RaRecord>({
           {table.getHeaderGroups().map((headerGroup) => (
             <tr key={headerGroup.id}>
               {headerGroup.headers.map((header) => (
-                <th key={header.id}>
+                <th key={header.id} className={header.column.columnDef.meta?.headerClassName}>
                   {header.isPlaceholder ? null : header.column.getCanSort() ? (
                     <button
                       className="flex items-center gap-2 cursor-pointer select-none"
