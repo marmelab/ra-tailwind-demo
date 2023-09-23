@@ -175,3 +175,4 @@ export const Datagrid = <RecordType extends RaRecord = RaRecord>({
     </>
   );
 };
+

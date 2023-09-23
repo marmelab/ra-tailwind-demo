@@ -16,5 +16,9 @@ module.exports = {
         "react": {
             "version": "detect"
         }
+    },
+    "rules": {
+        "no-unused-vars": "off",
+        "no-undef": "off",
     }
 }
