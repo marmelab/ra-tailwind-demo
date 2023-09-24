@@ -3,9 +3,9 @@ import { createColumnHelper } from "@tanstack/react-table";
 import { Link } from "react-router-dom";
 
 import { Datagrid } from "../ui/Datagrid";
-import { ReferenceField } from "../ui/ReferenceField";
-import { SearchInput } from "../ui/SearchInput";
-import { BadgeField } from "../ui/BadgeField";
+import { ReferenceField } from "../ui/fields/ReferenceField";
+import { SearchInput } from "../ui/inputs/SearchInput";
+import { BadgeField } from "../ui/fields/BadgeField";
 
 type Product = {
   id: number;

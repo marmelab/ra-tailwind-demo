@@ -1,5 +1,5 @@
 import { Form, useLogin } from "ra-core";
-import { TextInput } from "./TextInput";
+import { TextInput } from "../inputs/TextInput";
 
 export const LoginPage = () => {
   const login = useLogin();

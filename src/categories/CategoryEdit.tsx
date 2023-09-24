@@ -1,5 +1,5 @@
 import { EditBase, Form, required, useEditContext } from "ra-core";
-import { TextInput } from "../ui/TextInput";
+import { TextInput } from "../ui/inputs/TextInput";
 import { Button } from "react-aria-components";
 import { Link } from "react-router-dom";
 

@@ -1,9 +1,9 @@
 import { EditBase, Form, required, useEditContext } from "ra-core";
 import { Button } from "react-aria-components";
 import { Link } from "react-router-dom";
-import { TextInput } from "../ui/TextInput";
-import { ReferenceInput } from "../ui/ReferenceInput";
-import { SelectInput } from "../ui/SelectInput";
+import { TextInput } from "../ui/inputs/TextInput";
+import { ReferenceInput } from "../ui/inputs/ReferenceInput";
+import { SelectInput } from "../ui/inputs/SelectInput";
 
 export const ProductEdit = () => (
 	<EditBase mutationMode="pessimistic">

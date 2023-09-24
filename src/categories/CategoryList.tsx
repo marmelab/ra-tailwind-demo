@@ -1,7 +1,7 @@
 import { createColumnHelper } from "@tanstack/react-table";
 import { ListContextProvider, useListController } from "ra-core";
 import { Datagrid } from "../ui/Datagrid";
-import { ReferenceManyCount } from "../ui/ReferenceManyCount";
+import { ReferenceManyCount } from "../ui/fields/ReferenceManyCount";
 import { Link } from "react-router-dom";
 
 type Category = {
