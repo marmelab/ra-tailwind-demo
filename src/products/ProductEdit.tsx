@@ -3,7 +3,7 @@ import { Button } from "react-aria-components";
 import { Link } from "react-router-dom";
 import { TextInput } from "../ui/inputs/TextInput";
 import { ReferenceInput } from "../ui/inputs/ReferenceInput";
-import { SelectInput } from "../ui/inputs/SelectInput";
+import { AutocompleteInput } from "../ui/inputs/AutocompleteInput";
 
 export const ProductEdit = () => (
 	<EditBase mutationMode="pessimistic">
@@ -39,7 +39,7 @@ const ProductEditView = () => {
 						validate={required()}
 					/>
 					<ReferenceInput source="category_id" reference="categories">
-						<SelectInput label="Category" />
+						<AutocompleteInput label="Category" />
 					</ReferenceInput>
 					<div className="flex flex-row gap-4">
 						<Button className="btn btn-primary" type="submit">

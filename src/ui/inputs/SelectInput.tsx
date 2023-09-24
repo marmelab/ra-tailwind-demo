@@ -72,7 +72,7 @@ export const SelectInput = (
 							className={(state) =>
 								clsx("px-1 py-2 rounded", {
 									"bg-neutral text-neutral-content [@media(hover:hover)]:bg-neutral [@media(hover:hover)]:text-neutral-content":
-										state.isSelected,
+										state.isSelected || state.isFocused,
 								})
 							}
 							key={getChoiceValue(choice)}
