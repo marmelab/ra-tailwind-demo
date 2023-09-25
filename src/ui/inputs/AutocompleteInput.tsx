@@ -49,6 +49,8 @@ export const AutocompleteInput = (
     translateChoice: props.translateChoice ?? !isFromReference,
   });
 
+  console.log({ field: input.field })
+
   return (
     <ComboBox
       className="form-control w-full"
@@ -78,7 +80,7 @@ export const AutocompleteInput = (
               }
               key={getChoiceValue(choice)}
               id={getChoiceValue(choice)}
-              value={choice}
+              value={getChoiceValue(choice)}
             >
               {getChoiceText(choice)}
             </Item>
