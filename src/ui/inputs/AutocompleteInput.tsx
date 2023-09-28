@@ -17,7 +17,7 @@ import {
   Popover,
   ComboBox,
   Input,
-  Text,
+  Text as AriaText,
 } from "react-aria-components";
 
 export const AutocompleteInput = (
@@ -49,8 +49,6 @@ export const AutocompleteInput = (
     translateChoice: props.translateChoice ?? !isFromReference,
   });
 
-  console.log({ field: input.field })
-
   return (
     <ComboBox
       className="form-control w-full"
@@ -68,7 +66,7 @@ export const AutocompleteInput = (
         <Input className="input input-bordered join-item grow" />
         <Button className="btn join-item">▼</Button>
       </div>
-      <Popover>
+      <Popover isOpen>
         <ListBox className="menu menu-sm w-60 max-w-md bg-base-200 rounded">
           {allChoices.map((choice) => (
             <Item
@@ -88,22 +86,22 @@ export const AutocompleteInput = (
         </ListBox>
       </Popover>
       {props.helperText != null ? (
-        <Text className="label" slot="description">
+        <AriaText className="label" slot="description">
           <span className="label-text-alt">
             {typeof props.helperText === "string"
               ? translate(props.helperText, { _: props.helperText })
               : props.helperText}
           </span>
-        </Text>
+        </AriaText>
       ) : null}
       {input.fieldState.invalid &&
       input.fieldState.isTouched &&
       input.fieldState.error?.message ? (
-        <Text className="label text-error" slot="errorMessage">
+        <AriaText className="label text-error" slot="errorMessage">
           <span className="label-text-alt">
             <ValidationError error={input.fieldState.error.message} />
           </span>
-        </Text>
+        </AriaText>
       ) : null}
     </ComboBox>
   );
