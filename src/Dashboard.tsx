@@ -7,7 +7,7 @@ import {
 
 export const Dashboard = () => (
   <>
-    <div className="stats shadow grow-0">
+    <div className="stats shadow grow-0 mb-4">
       <div className="stat">
         <div className="stat-figure text-primary">
           <HeartIcon className="inline-block w-8 h-8 stroke-current" />
