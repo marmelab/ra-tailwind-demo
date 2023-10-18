@@ -16,10 +16,10 @@ export const TextInput = (props: InputProps) => {
 				</span>
 			</Label>
 			<Input
-				type="text"
 				className={clsx("input input-bordered w-full", {
 					"input-error": input.fieldState.invalid && input.fieldState.isTouched,
 				})}
+				type={props.type}
 				{...input.field}
 			/>
 			{props.helperText != null ? (
