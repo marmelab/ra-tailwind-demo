@@ -49,11 +49,19 @@ export const AutocompleteInput = (
     translateChoice: props.translateChoice ?? !isFromReference,
   });
 
+  if (isLoading) {
+    return null;
+  }
+
   return (
     <ComboBox
       className="form-control w-full"
       selectedKey={input.field.value}
-      onSelectionChange={(selectedKey) => input.field.onChange(selectedKey)}
+      onSelectionChange={(selectedKey) => {
+        if (selectedKey) {
+          input.field.onChange(selectedKey);
+        }
+      }}
     >
       <Label className="label">
         <span className="label-text">
@@ -66,7 +74,7 @@ export const AutocompleteInput = (
         <Input className="input input-bordered join-item grow" />
         <Button className="btn join-item">▼</Button>
       </div>
-      <Popover isOpen>
+      <Popover>
         <ListBox className="menu menu-sm w-60 max-w-md bg-base-200 rounded">
           {allChoices.map((choice) => (
             <Item
