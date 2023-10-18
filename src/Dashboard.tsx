@@ -1,15 +1,13 @@
 import {
   AdjustmentsVerticalIcon,
-  ArchiveBoxIcon,
   BoltIcon,
   HeartIcon,
   InformationCircleIcon,
-  RectangleStackIcon,
 } from "@heroicons/react/24/outline";
 
 export const Dashboard = () => (
-  <div className="flex flex-row gap-20">
-    <div className="stats stats-vertical w-2/5 shadow grow-0">
+  <>
+    <div className="stats shadow grow-0">
       <div className="stat">
         <div className="stat-figure text-primary">
           <HeartIcon className="inline-block w-8 h-8 stroke-current" />
@@ -45,31 +43,12 @@ export const Dashboard = () => (
         <div className="stat-value">4,200</div>
         <div className="stat-desc">↗︎ 400 (22%)</div>
       </div>
-
-      <div className="stat">
-        <div className="stat-figure text-secondary">
-          <ArchiveBoxIcon className="inline-block w-8 h-8 stroke-current" />
-        </div>
-        <div className="stat-title">New Registers</div>
-        <div className="stat-value">1,200</div>
-        <div className="stat-desc">↘︎ 90 (14%)</div>
-      </div>
-
-      <div className="stat">
-        <div className="stat-figure text-secondary">
-          <RectangleStackIcon className="inline-block w-8 h-8 stroke-current" />
-        </div>
-        <div className="stat-value">86%</div>
-        <div className="stat-title">Tasks done</div>
-        <div className="stat-desc text-secondary">31 tasks remaining</div>
-      </div>
     </div>
-    <div className="grow card w-full bg-base-100 shadow">
+    <div className="card bg-base-100 shadow h-2/3">
       <figure>
         <svg
           viewBox="0 0 2000 1400"
           xmlns="http://www.w3.org/2000/svg"
-          className="w-full h-full"
         >
           <path
             d="M0 1386.093c21-6.624 63-19.758 105-33.116 42-13.359 63 .43 105-33.675 42-34.106 63-109.957 105-136.853 42-26.896 63 28.086 105 2.372s63-109.305 105-130.942 63 26.917 105 22.757 63-10.259 105-43.554 63-84.278 105-122.923c42-38.645 63-57.35 105-70.304s63 19.66 105 5.532 63-17.506 105-76.17c42-58.666 63-240.299 105-217.156 42 23.142 63 350.572 105 332.868 42-17.703 63-313.383 105-421.386 42-108.002 63-95.975 105-118.627 42-22.653 63-75.996 105 5.362 42 81.359 63 333.051 105 401.428 42 68.377 63 60.6 105-59.542s84-432.932 105-541.165L2000 1400H0Z"
@@ -77,7 +56,7 @@ export const Dashboard = () => (
           />
           <path
             d="M0 1386.093c21-6.624 63-19.758 105-33.116 42-13.359 63 .43 105-33.675 42-34.106 63-109.957 105-136.853 42-26.896 63 28.086 105 2.372s63-109.305 105-130.942 63 26.917 105 22.757 63-10.259 105-43.554 63-84.278 105-122.923c42-38.645 63-57.35 105-70.304s63 19.66 105 5.532 63-17.506 105-76.17c42-58.666 63-240.299 105-217.156 42 23.142 63 350.572 105 332.868 42-17.703 63-313.383 105-421.386 42-108.002 63-95.975 105-118.627 42-22.653 63-75.996 105 5.362 42 81.359 63 333.051 105 401.428 42 68.377 63 60.6 105-59.542s84-432.932 105-541.165"
-            fill="none" 
+            fill="none"
             stroke="#444cf7"
             strokeWidth="4"
           />
@@ -106,5 +85,5 @@ export const Dashboard = () => (
         </svg>
       </figure>
     </div>
-  </div>
+  </>
 );

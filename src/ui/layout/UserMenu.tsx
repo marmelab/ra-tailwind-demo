@@ -1,3 +1,4 @@
+import { ArrowRightOnRectangleIcon } from "@heroicons/react/24/outline";
 import { useGetIdentity, useLogout } from "ra-core";
 
 export const UserMenu = () => {
@@ -5,20 +6,21 @@ export const UserMenu = () => {
   const logout = useLogout();
 
   return identity ? (
-    <div className="dropdown dropdown-end">
-      <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
-        <div className="w-10 rounded-full">
-          <img src={identity.avatar} />
+    <div>
+      <div className="flex items-center justify-between">
+        <div className="flex items-center">
+          <div className="avatar">
+            <div className="w-10 rounded-full mr-4">
+              <img src={identity.avatar} />
+            </div>
+          </div>
+          <div>{identity.fullName}</div>
         </div>
-      </label>
-      <ul
-        tabIndex={0}
-        className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52"
-      >
-        <li>
-          <button onClick={logout}>Logout</button>
-        </li>
-      </ul>
+        <button className="btn btn-neutral btn-sm btn-square" onClick={logout}>
+          <span className="sr-only">Logout</span>
+          <ArrowRightOnRectangleIcon className="w-6 h-6" />
+        </button>
+      </div>
     </div>
   ) : null;
 };

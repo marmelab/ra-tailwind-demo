@@ -1,3 +1,4 @@
+import { ChevronDownIcon } from "@heroicons/react/24/outline";
 import clsx from "clsx";
 import { useCallback, useEffect, useState } from "react";
 import {
@@ -59,7 +60,7 @@ export const ThemeSelector = () => {
     >
       <div className="join">
         <Input className="input input-sm input-bordered w-full join-item" />
-        <Button className="btn btn-sm btn-square join-item">▼</Button>
+        <Button className="btn btn-neutral btn-sm btn-square join-item"><ChevronDownIcon /></Button>
       </div>
       <Popover>
         <ListBox className="block menu menu-vertical max-h-96 overflow-y-auto menu-sm w-60 max-w-md bg-base-200 rounded">
